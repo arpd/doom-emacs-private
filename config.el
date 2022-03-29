@@ -1,7 +1,10 @@
 ;;; ~/.config/doom/config.el -*- lexical-binding: t; -*-
 
-(setq user-full-name "Henrik Lissner"
-      user-mail-address "contact@henrik.io")
+(setq user-full-name "Ben Foster"
+      user-mail-address "bf@svbtl.io"
+      which-key-idle-delay 0.01
+      which-key-idle-secondary-delay 0.01)
+
 
 ;; When I bring up Doom's scratch buffer with SPC x, it's often to play with
 ;; elisp or note something down (that isn't worth an entry in my notes). I can

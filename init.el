@@ -48,7 +48,6 @@
        multiple-cursors  ; editing in many places at once
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
-       snippets
        ;;word-wrap
 
        :emacs
@@ -98,36 +97,13 @@
        ;;tty               ; enable terminal integration
 
        :lang
-       ;;agda
-       ;;assembly
-       beancount
+       assembly
        (cc +lsp)
-       ;;crystal
-       ;;clojure
-       ;;(csharp +unity +lsp)
        common-lisp
-       ;;coq
-       ;;data
-       ;;dart
-       ;;erlang
-       ;;elixir
-       ;;elm
        emacs-lisp
-       ;;ess
-       ;;faust
-       ;;fortran
-       ;;fsharp            ; ML stands for Microsoft's Language
-       ;;go
-       ;;haskell
-       ;;hy
-       ;;(java +meghanada)
        (javascript +lsp)
-       ;;julia
-       ;;latex
-       ;;ledger
        (lua +fennel)
        markdown
-       ;;nim
        nix
        ;;ocaml
        (org +dragndrop +roam2 +present)
@@ -139,27 +115,14 @@
        ;;qt
        ;;racket
        rest
-       ruby
        (rust +lsp)
-       ;;scala
-       ;;(scheme +guile)
        sh
-       ;;sml
-       ;;swift
        web
        yaml
 
        :email
-       ;;(mu4e +gmail)       ; WIP
-       ;;notmuch             ; WIP
-       ;;(wanderlust +gmail) ; WIP
-
        :app
-       ;;calendar
        everywhere
-       ;;irc
-       (rss +org)
-       ereader
 
        :config
        ;;literate
