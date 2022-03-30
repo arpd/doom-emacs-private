@@ -15,9 +15,7 @@
 ;;
 ;;; UI
 
-(setq doom-theme 'doom-dracula
-      doom-font (font-spec :family "JetBrainsMono" :size 12 :weight 'light)
-      doom-variable-pitch-font (font-spec :family "DejaVu Sans" :size 13))
+(setq doom-theme 'doom-dracula)
 
 ;; Line numbers are pretty slow all around. The performance boost of disabling
 ;; them outweighs the utility of always keeping them on.
