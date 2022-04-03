@@ -21,7 +21,7 @@
        ;;minimap
        modeline
        ;;nav-flash
-       ;;neotree
+       neotree
        ophints
        (popup +defaults)
        ;;treemacs

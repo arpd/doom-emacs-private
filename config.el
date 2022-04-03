@@ -2,20 +2,25 @@
 
 (setq user-full-name "Ben Foster"
       user-mail-address "bf@svbtl.io"
-      which-key-idle-delay 0.01
-      which-key-idle-secondary-delay 0.01)
-
+      which-key-idle-delay 0.1
+      which-key-idle-secondary-delay 0.1)
 
 ;; When I bring up Doom's scratch buffer with SPC x, it's often to play with
 ;; elisp or note something down (that isn't worth an entry in my notes). I can
 ;; do both in `lisp-interaction-mode'.
 (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
 
+(setq vc-ignore-dir-regexp
+      (format "\\(%s\\)\\|\\(%s\\)"
+              vc-ignore-dir-regexp
+              tramp-file-name-regexp))
 
 ;;
 ;;; UI
 
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-dracula
+      doom-font (font-spec :family "JetBrains Mono" :size 13 :weight 'thin)
+      doom-variable-pitch-font (font-spec :family "Menlo" :size 13))
 
 ;; Line numbers are pretty slow all around. The performance boost of disabling
 ;; them outweighs the utility of always keeping them on.
