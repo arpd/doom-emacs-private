@@ -1,9 +1,14 @@
 ;;; ~/.config/doom/config.el -*- lexical-binding: t; -*-
 
+(defun is-work-host ()
+  (string= (system-name) "workvm-vbox"))
+
 (setq user-full-name "Ben Foster"
-      user-mail-address "bf@svbtl.io"
-      which-key-idle-delay 0.1
-      which-key-idle-secondary-delay 0.1)
+      user-mail-address (if (is-work-host)
+                            "ben.foster@etas.com"
+                          "bf@svbtl.io")
+      which-key-idle-delay 0.01
+      which-key-idle-secondary-delay 0.01)
 
 ;; When I bring up Doom's scratch buffer with SPC x, it's often to play with
 ;; elisp or note something down (that isn't worth an entry in my notes). I can
@@ -15,12 +20,15 @@
               vc-ignore-dir-regexp
               tramp-file-name-regexp))
 
+(set-frame-parameter (selected-frame) 'alpha '(100 100))
+
 ;;
 ;;; UI
 
-(setq doom-theme 'doom-dracula
-      doom-font (font-spec :family "JetBrains Mono" :size 13 :weight 'thin)
-      doom-variable-pitch-font (font-spec :family "Menlo" :size 13))
+;; doom-font (font-spec :family "PragmataPro Mono" :size 12 :weight 'light)
+(setq doom-theme 'doom-city-lights
+      doom-font (font-spec :family "PragmataPro Mono" :size 12 :weight 'light)
+      doom-variable-pitch-font (font-spec :family "Menlo" :size 12))
 
 ;; Line numbers are pretty slow all around. The performance boost of disabling
 ;; them outweighs the utility of always keeping them on.
@@ -100,7 +108,7 @@
 
 
 ;;; :tools magit
-(setq magit-repository-directories '(("~/projects" . 2))
+(setq magit-repository-directories '(("~/proj" . 2))
       magit-save-repository-buffers nil
       ;; Don't restore the wconf after quitting magit, it's jarring
       magit-inhibit-save-previous-winconf t
