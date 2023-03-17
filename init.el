@@ -58,14 +58,14 @@
        vc
 
        :term
-       eshell            ; a consistent, cross-platform shell (WIP)
+       ;;eshell            ; a consistent, cross-platform shell (WIP)
        ;;shell
        ;;term              ; terminals in Emacs
-       vterm
+       ;;vterm
 
        :checkers
        syntax
-       spell
+       ;;spell
        ;;grammar
 
        :tools
@@ -77,7 +77,7 @@
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)
        ;;gist
-       (lookup +docsets +dictionary)
+       lookup
        lsp
        ;;macos             ; MacOS-specific commands
        magit             ;
@@ -97,16 +97,16 @@
        ;;tty               ; enable terminal integration
 
        :lang
-       assembly
+       ;;assembly
        (cc +lsp)
-       common-lisp
+       ;;common-lisp
        emacs-lisp
        (javascript +lsp)
-       (lua +fennel)
+       ;;(lua +fennel)
        markdown
        nix
        ;;ocaml
-       (org +dragndrop +roam2 +present)
+       org
        ;;perl
        ;;php
        ;;plantuml
@@ -122,7 +122,7 @@
 
        :email
        :app
-       everywhere
+       ;;everywhere
 
        :config
        ;;literate
